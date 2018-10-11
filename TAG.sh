@@ -27,8 +27,8 @@ if [ $ERR -eq 0 ]; then
     echo "Test passed"	# - Tagging"
     HASH=$(git rev-parse --short HEAD)
     echo $HASH
-    sudo docker tag -f jenkins_identidock peter1938/identidock:$HASH
-    sudo docker tag -f jenkins_identidock peter1938/identidock:newest
+    sudo docker tag jenkins_identidock peter1938/identidock:$HASH
+    sudo docker tag jenkins_identidock peter1938/identidock:newest
   else
     echo "Site returned " $CODE
     ERR=1
